@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ric Jonel's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e0ba072990.js" crossorigin="anonymous"></script>
+</head>
 
-        <meta charset="UTF-8">
-
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title> Ric Jonel's Portfolio </title>
-
-        <link rel="stylesheet" href="style.css">
-
-        <script src="https://kit.fontawesome.com/e0ba072990.js" crossorigin="anonymous"></script>
-
-    </head>
-
-    <body>
+<body>
 
         <div id="header">
 
@@ -56,13 +48,11 @@
 
                 A current student in Doña Carmen Denia National High School</h2>
 
-              </div>
+            </div>
               
-              </div>
-
             </div>
 
-        </div>
+        </div> 
 
 <!-------------about-------------->
 
@@ -150,7 +140,7 @@ This website is my personal blog, where I write about web development, graphic d
 
             <div>
 
-                <i class="fa-solid fa-pen-nib"></i>
+                <i class="fa-solid fa-code"></i>
 
                 <h2>Web Design</h2>
 
@@ -159,17 +149,16 @@ This website is my personal blog, where I write about web development, graphic d
 
             </div>
             <div>
-                <i class="fa-solid fa-mobile"></i>
+                <i class="fa-solid fa-paint-brush"></i>
                 <h2>Graphic Design</h2>
                 <p>From logos and websites to packaging and social media graphics, I design experiences that resonate and connect.</p>
                 
             </div>
             <div>
-                <i class="fa-solid fa-pen-nib"></i>
+                <i class="fa-sharp fa-solid fa-image"></i>
                 <h2>Photography</h2>
                 <p>I frame the majesty of mountains, the vibrancy of forests, and the boundless wonder of the sky. </p>
                 
-
             </div>
 
         </div>
@@ -258,7 +247,7 @@ This website is my personal blog, where I write about web development, graphic d
 
                 </div>
 
-                <a href="Images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                <a href="Images/mycv.png" download class="btn btn2">Download CV</a>
 
             </div>
 
@@ -287,61 +276,37 @@ This website is my personal blog, where I write about web development, graphic d
 </div>
 
 <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-    var tablinks = document.getElementsByClassName("tab-links");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
 
-    var tabcontents = document.getElementsByClassName("tab-contents");
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
 
-    
-
-    function opentab(tabname){
-
-        for(tablink of tablinks){
-
-            tablink.classList.remove("active-link");
-
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
 
-        for(tabcontent of tabcontents){
+        var sidemenu = document.getElementById("sidemenu");
 
-            tabcontent.classList.remove("active-tab");
-
+        function openmenu() {
+            sidemenu.style.right = "0";
         }
 
-        event.currentTarget.classList.add("active-link");
-
-        document.getElementById(tabname).classList.add("active-tab");
-
-    }
-
-</script>
-
-        
-
-    <script>
-
-        var sidemeu = document.getElementById("sidemenu");
-
-        function openmenu(){
-
-            sidemeu.style.right = "0";
-
+        function closemenu() {
+            sidemenu.style.right = "-200px";
         }
-
-        function closemenu(){
-
-            sidemeu.style.right = "-200px";
-
-        }
-
     </script>
-
-    </body>
+</body>
 
 </html>
-
-of
-
+  
+   
 
   
    
